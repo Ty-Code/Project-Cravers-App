@@ -1,10 +1,12 @@
 'use strict';
-import { getCoordinates } from "./pages/inputPage";
+
+
+// const API_KEY1 = process.env.API_KEY_POSTCODETECH;
 
 export async function fetchData(url) {
   const response = await fetch(url, {
     headers: {
-      Authorization: '',
+      Authorization: API_KEY1,
     },
   });
   if (!response.ok) {
@@ -13,14 +15,3 @@ export async function fetchData(url) {
   return response.json();
 }
 
-export async function main() {
-  try {
-    const data = await fetchData(
-      'https://postcode.tech/api/v1/postcode/full?postcode=2031VT&number=7'
-    );
-    getCoordinates(data);
-  } catch (error) {
-    console.log(error);
-    console.log(err.stack)
-  }
-}

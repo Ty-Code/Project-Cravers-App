@@ -10,12 +10,12 @@ export const getInputElement = () => {
   outerBoxElement.classList.add('centered');
 
   outerBoxElement.innerHTML = `
-    <h1>My Coordinates Now!</h1>
+    <h1>Donut Crave</h1>
 
     <label for="postcode">Your Postcode:</label>
-    <input type="text" id="${POSTCODE_INPUT_ID}" name="postcode" required minlength="4" maxlength="6" size="10">
+    <input type="text" id="${POSTCODE_INPUT_ID}" name="postcode" required minlength="4" maxlength="6" size="10" value='2031VT'>
 
-    <label for="postcode">Your Postcode:</label>
+    <label for="number">Number:</label>
     <input type="text" id="${NUMBER_INPUT_ID}" name="number" required minlength="1" maxlength="4" size="10">
 
     <button id="${GET_BUTTON_ID}" class="btn">

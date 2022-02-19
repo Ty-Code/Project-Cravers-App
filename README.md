@@ -1,11 +1,11 @@
-# My Coordinates Now-App
+# Donut Crave-App
 (ONGOING)
 
 ---
 
 ## Project Overview
 
-My Coordinates Now app grabs GPS coordinates based on two parameters (postcode and number) entered by the user.
+Donut Crave app grabs GPS coordinates based on two parameters (postcode and number) entered by the user and lists the donut shops in the neighborhood with their the addresses
 
 ## Built With
 
@@ -38,8 +38,8 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
  <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create the project structure.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an input page to enter input (postcode and number) and make a request. </li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(list of donut shops ).</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(gps coordinates).</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a button to the output page in order to reload the app and to be able to make a new request.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Connect to an API to grab data including loading/error handling functions.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Style the app based on the colour palette of a company/organisation.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Prepare the repository including a readme.</li>
@@ -48,9 +48,9 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
 ## Nice-to-Haves
 
 <ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a feature that if the user click on a button, it shows his full(complete) address.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a button to the output page in order to reload the app and to be able to make a new request.</li>
 
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Embed a static map with a marker based on the GPS coordinates. (Need to use another API)</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Embed a static map with a marker based on the GPS coordinates of the donut shops.</li>
 
 
 </ul>

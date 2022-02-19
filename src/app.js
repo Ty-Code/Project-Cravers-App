@@ -7,4 +7,4 @@ const loadApp = () => {
 
 window.addEventListener('load', loadApp);
 
-//! 2031VT - 7
+
