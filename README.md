@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-Donut Crave app grabs GPS coordinates based on two parameters (postcode and number) entered by the user and lists the donut shops in the neighborhood with their the addresses
+Donut Crave app grabs GPS coordinates based on two parameters (postcode and number) entered by the user and lists the donut shops in the neighborhood with their addresses
 
 ## Built With
 
@@ -38,7 +38,7 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
  <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create the project structure.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an input page to enter input (postcode and number) and make a request. </li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(list of donut shops ).</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(list of donut shops).</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(gps coordinates).</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Connect to an API to grab data including loading/error handling functions.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Style the app based on the colour palette of a company/organisation.</li>
@@ -54,5 +54,6 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
 
 
 </ul>
+
  ## Quiz App Demo (to be added)
  <!-- <img src="" style="max-width: 100%;"> -->
