@@ -10,55 +10,38 @@ export const initOutputPage = (userInterface, postcodeValue, numberValue) => {
     return response.json();
   }
 
-  function getCoordinates(data) {
-    const longitude = data.geo.lon;
-    const latitude = data.geo.lat;
-    console.log(longitude);
-    console.log(latitude);
-    return { longitude, latitude };
-  }
+  function getDonutShops(shopList) {
+    const ulElement = document.createElement('ul');
+    userInterface.append(ulElement);
 
-  function getDonutShops(getCoordinates) {
-    console.log(getCoordinates(data));
+    shopList.forEach((shop) => {
+      const liElement = document.createElement('li');
+      ulElement.append(liElement);
+      liElement.innerHTML = shop.place_name;
+    });
   }
 
   async function main() {
     try {
-      const data = await fetchData(
+      const {
+        geo: { lon: longitude, lat: latitude },
+      } = await fetchData(
         `https://postcode.tech/api/v1/postcode/full?postcode=${postcodeValue}&number=${numberValue}`,
         {
           headers: {
-            Authorization: ,
+            Authorization: 'Bearer 18bf0711-9335-44f9-ab93-23ce2ac046d1',
           },
         }
       );
-      const { longitude, latitude } = getCoordinates(data);
-      const data2 = await fetchData(
-        `https://api.mapbox.com/geocoding/v5/mapbox.places/donut.json?type=poi&proximity=${longitude},${latitude}&access_token=
+      const { features: shopList } = await fetchData(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/donut.json?type=poi&proximity=${longitude},${latitude}&access_token=pk.eyJ1IjoidHljb2RlMCIsImEiOiJja3pxeHBibW4wZXo3MnBtdWRoNnM2MGVkIn0.dN90GyHPEtOSnMq3s5beQA
         `
       );
-      console.log(data2);
+      getDonutShops(shopList);
     } catch (error) {
       console.log(error);
       console.log(err.stack);
     }
   }
   main();
-
-  // const ulElement = document.createElement('ul');
-  // const liElement = document.createElement('li');
-  // userInterface.append(ulElement);
-
-  // function getCoordinates(data) {
-  //   ulElement.append(liElement);
-  //   liElement.textContent = data.postcode;
-  // }
-  // document.getElementById(RETURN_BUTTON_ID).addEventListener('click', () => router(input));
-
-  // const ul = document.querySelector('#resultsList');
-  // const data2 = data.features;
-  // data2.forEach((feature) => {
-  //   const li = document.createElement('li');
-  //   ul.append(li);
-  //   li.innerHTML = feature.place_name;
 };
