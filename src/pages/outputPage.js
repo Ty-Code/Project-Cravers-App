@@ -29,12 +29,12 @@ export const initOutputPage = (userInterface, postcodeValue, numberValue) => {
         `https://postcode.tech/api/v1/postcode/full?postcode=${postcodeValue}&number=${numberValue}`,
         {
           headers: {
-            Authorization: 'Bearer 18bf0711-9335-44f9-ab93-23ce2ac046d1',
+            Authorization: '',
           },
         }
       );
       const { features: shopList } = await fetchData(
-        `https://api.mapbox.com/geocoding/v5/mapbox.places/donut.json?type=poi&proximity=${longitude},${latitude}&access_token=pk.eyJ1IjoidHljb2RlMCIsImEiOiJja3pxeHBibW4wZXo3MnBtdWRoNnM2MGVkIn0.dN90GyHPEtOSnMq3s5beQA
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/donut.json?type=poi&proximity=${longitude},${latitude}&access_token=
         `
       );
       getDonutShops(shopList);
