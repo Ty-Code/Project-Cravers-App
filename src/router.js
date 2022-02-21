@@ -3,7 +3,7 @@ import { USER_INTERFACE_ID } from './constants.js';
 import { initInputPage } from './pages/inputPage.js';
 import { initOutputPage } from './pages/outputPage.js';
 
-export const router = (page, postcodeValue, numberValue) => {
+export const router = (page, foodType, postcodeValue, numberValue) => {
   const userInterfaceElement = document.getElementById(USER_INTERFACE_ID);
   userInterfaceElement.innerHTML = '';
   
@@ -12,7 +12,7 @@ export const router = (page, postcodeValue, numberValue) => {
       initInputPage(userInterfaceElement);
       break;
     case 'output':
-      initOutputPage(userInterfaceElement, postcodeValue, numberValue);
+      initOutputPage(userInterfaceElement, foodType, postcodeValue, numberValue);
       break;
   }
 };

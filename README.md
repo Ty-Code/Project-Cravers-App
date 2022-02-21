@@ -1,11 +1,11 @@
-# Donut Crave-App
+# CRAVERS-App
 (ONGOING)
 
 ---
 
 ## Project Overview
 
-Donut Crave app grabs GPS coordinates based on two parameters (postcode and number) entered by the user and lists the donut shops in the neighborhood with their addresses
+'Cravers' is a single page application that grabs GPS coordinates based on two parameters (postcode and number) entered by the user and lists the requested shops in the neighborhood with their addresses.
 
 ## Built With
 
@@ -38,7 +38,7 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
  <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create the project structure.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an input page to enter input (postcode and number) and make a request. </li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(list of donut shops).</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(list of requested shops nearby).</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create an output page to show output(gps coordinates).</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Connect to an API to grab data including loading/error handling functions.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Style the app based on the colour palette of a company/organisation.</li>
@@ -48,12 +48,15 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
 ## Nice-to-Haves
 
 <ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a select menu to choose different food types for search request</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a button to the output page in order to reload the app and to be able to make a new request.</li>
-
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Embed a static map with a marker based on the GPS coordinates of the donut shops.</li>
-
-
 </ul>
+
+## Design: 
+
+The color palette of Dunkin' will be used in the project.
+
 
  ## Quiz App Demo (to be added)
  <!-- <img src="" style="max-width: 100%;"> -->

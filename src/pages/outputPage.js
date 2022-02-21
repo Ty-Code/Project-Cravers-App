@@ -1,7 +1,16 @@
 import { router } from '../router.js';
+import { getOutputElement } from '../views/outputView.js';
+import { getHeaderElement } from '../views/outputView.js';
+import { RESULT_LIST_ID } from '../constants.js';
 import { RETURN_BUTTON_ID } from '../constants.js';
 
-export const initOutputPage = (userInterface, postcodeValue, numberValue) => {
+export const initOutputPage = (userInterface, foodType, postcodeValue, numberValue) => {
+  const headerElement = getHeaderElement();
+  userInterface.append(headerElement);
+
+  const outputElement = getOutputElement();
+  userInterface.append(outputElement);
+
   async function fetchData(url, obj) {
     const response = await fetch(url, obj);
     if (!response.ok) {
@@ -10,14 +19,14 @@ export const initOutputPage = (userInterface, postcodeValue, numberValue) => {
     return response.json();
   }
 
-  function getDonutShops(shopList) {
-    const ulElement = document.createElement('ul');
-    userInterface.append(ulElement);
+  function getShops(shopList) {
+    const ulElement = document.getElementById(RESULT_LIST_ID);
 
     shopList.forEach((shop) => {
       const liElement = document.createElement('li');
       ulElement.append(liElement);
       liElement.innerHTML = shop.place_name;
+      liElement.classList.add('results')
     });
   }
 
@@ -29,15 +38,15 @@ export const initOutputPage = (userInterface, postcodeValue, numberValue) => {
         `https://postcode.tech/api/v1/postcode/full?postcode=${postcodeValue}&number=${numberValue}`,
         {
           headers: {
-            Authorization: '',
+            Authorization: 'Bearer 18bf0711-9335-44f9-ab93-23ce2ac046d1',
           },
         }
       );
       const { features: shopList } = await fetchData(
-        `https://api.mapbox.com/geocoding/v5/mapbox.places/donut.json?type=poi&proximity=${longitude},${latitude}&access_token=
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${foodType}.json?type=poi&proximity=${longitude},${latitude}&access_token=pk.eyJ1IjoidHljb2RlMCIsImEiOiJja3pxeHBibW4wZXo3MnBtdWRoNnM2MGVkIn0.dN90GyHPEtOSnMq3s5beQA
         `
       );
-      getDonutShops(shopList);
+      getShops(shopList);
     } catch (error) {
       console.log(error);
       console.log(err.stack);
