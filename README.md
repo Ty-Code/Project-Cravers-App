@@ -59,4 +59,4 @@ The color palette of Dunkin' will be used in the project.
 
 
  ## Quiz App Demo (to be added)
- <!-- <img src="./img/craversDemo.gif" style="max-width: 100%;"> -->
+ <img src="./img/craversDemo.gif" style="max-width: 100%;">
