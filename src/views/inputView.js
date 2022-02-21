@@ -42,7 +42,7 @@ export const getInputElement = () => {
     </select>
     
     <label class="label" for="postcode">POSTCODE :</label>
-    <input class="input" type="text" id="${POSTCODE_INPUT_ID}" name="postcode" required minlength="4" maxlength="6" size="10" value='2031VT' placeholder="Enter your postcode">
+    <input class="input" type="text" id="${POSTCODE_INPUT_ID}" name="postcode" required minlength="4" maxlength="6" size="10"  placeholder="Enter your postcode">
 
     <label class="label" for="number">HOUSE NUMBER :</label>
     <input class="input" type="text" id="${NUMBER_INPUT_ID}" name="number" required minlength="1" maxlength="4" size="10" placeholder="Enter your house number">

@@ -37,7 +37,7 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
       liElement.innerHTML = shop.place_name;
       liElement.classList.add('results');
       liElement.addEventListener('mouseenter', () => {
-        mapElement.src = `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-x+000(${shopLongitude},${shopLatitude})/${shopLongitude},${shopLatitude},15/650x250?access_token=pk.eyJ1IjoidHljb2RlMCIsImEiOiJja3pxeHBibW4wZXo3MnBtdWRoNnM2MGVkIn0.dN90GyHPEtOSnMq3s5beQA `;
+        mapElement.src = `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-x+000(${shopLongitude},${shopLatitude})/${shopLongitude},${shopLatitude},15/650x250?access_token=`;
       });
       liElement.addEventListener('mouseleave', () => {
         mapElement.src = ``;
@@ -53,12 +53,12 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
         `https://postcode.tech/api/v1/postcode/full?postcode=${postcodeValue}&number=${numberValue}`,
         {
           headers: {
-            Authorization: 'Bearer 18bf0711-9335-44f9-ab93-23ce2ac046d1',
+            Authorization: 'Bearer ',
           },
         }
       );
       const { features: shopList } = await fetchData(
-        `https://api.mapbox.com/geocoding/v5/mapbox.places/${foodType}.json?type=poi&proximity=${longitude},${latitude}&access_token=pk.eyJ1IjoidHljb2RlMCIsImEiOiJja3pxeHBibW4wZXo3MnBtdWRoNnM2MGVkIn0.dN90GyHPEtOSnMq3s5beQA
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${foodType}.json?type=poi&proximity=${longitude},${latitude}&access_token=
         `
       );
       getShops(shopList);
