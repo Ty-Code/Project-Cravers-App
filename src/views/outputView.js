@@ -1,6 +1,8 @@
 'use strict';
 
 import { RESULT_LIST_ID } from '../constants.js';
+import { MAP_IMG_ID } from '../constants.js';
+import { RESTART_BUTTON_ID } from '../constants.js';
 
 export const getHeaderElement = () => {
   const headerElement = document.createElement('div');
@@ -31,7 +33,10 @@ export const getOutputElement = () => {
 
   outerBoxElement.innerHTML = `
     <ul id="${RESULT_LIST_ID}"></ul>
-
+    <img id="${MAP_IMG_ID}">
+    <button id="${RESTART_BUTTON_ID}" class="btn">
+    NEW CRAVE
+  </button>
 
   `;
 

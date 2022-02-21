@@ -48,7 +48,7 @@ Contributions are very welcome. If you have any suggestion to make it better, yo
 ## Nice-to-Haves
 
 <ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a select menu to choose different food types for search request</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a select menu to choose different food types for search request.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a button to the output page in order to reload the app and to be able to make a new request.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Embed a static map with a marker based on the GPS coordinates of the donut shops.</li>
 </ul>

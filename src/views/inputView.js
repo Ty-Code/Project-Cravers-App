@@ -47,7 +47,7 @@ export const getInputElement = () => {
     <label class="label" for="number">HOUSE NUMBER :</label>
     <input class="input" type="text" id="${NUMBER_INPUT_ID}" name="number" required minlength="1" maxlength="4" size="10" placeholder="Enter your house number">
 
-    <button id="${GET_BUTTON_ID}" class="btn">
+    <button id="${GET_BUTTON_ID}" class="btn" type="submit">
       SATISFY!
     </button>
   `;

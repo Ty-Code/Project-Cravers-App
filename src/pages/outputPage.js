@@ -2,7 +2,8 @@ import { router } from '../router.js';
 import { getOutputElement } from '../views/outputView.js';
 import { getHeaderElement } from '../views/outputView.js';
 import { RESULT_LIST_ID } from '../constants.js';
-import { RETURN_BUTTON_ID } from '../constants.js';
+import { MAP_IMG_ID } from '../constants.js';
+import { RESTART_BUTTON_ID } from '../constants.js';
 
 export const initOutputPage = (userInterface, foodType, postcodeValue, numberValue) => {
   const headerElement = getHeaderElement();
@@ -10,6 +11,11 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
 
   const outputElement = getOutputElement();
   userInterface.append(outputElement);
+
+  const restartButton = document.getElementById(RESTART_BUTTON_ID);
+  restartButton.addEventListener('click', () => {
+    router('input');
+  });
 
   async function fetchData(url, obj) {
     const response = await fetch(url, obj);
@@ -21,12 +27,21 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
 
   function getShops(shopList) {
     const ulElement = document.getElementById(RESULT_LIST_ID);
+    const mapElement = document.getElementById(MAP_IMG_ID);
 
     shopList.forEach((shop) => {
+      const shopLongitude = shop.geometry.coordinates[0];
+      const shopLatitude = shop.geometry.coordinates[1];
       const liElement = document.createElement('li');
       ulElement.append(liElement);
       liElement.innerHTML = shop.place_name;
-      liElement.classList.add('results')
+      liElement.classList.add('results');
+      liElement.addEventListener('mouseenter', () => {
+        mapElement.src = `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-x+000(${shopLongitude},${shopLatitude})/${shopLongitude},${shopLatitude},15/650x250?access_token=pk.eyJ1IjoidHljb2RlMCIsImEiOiJja3pxeHBibW4wZXo3MnBtdWRoNnM2MGVkIn0.dN90GyHPEtOSnMq3s5beQA `;
+      });
+      liElement.addEventListener('mouseleave', () => {
+        mapElement.src = ``;
+      });
     });
   }
 
