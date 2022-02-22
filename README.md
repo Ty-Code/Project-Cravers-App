@@ -1,7 +1,6 @@
 # CRAVERS-App
-(ONGOING)
-
 ---
+
 
 ## Project Overview
 
@@ -33,7 +32,7 @@
 <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a select menu to choose food type for different search requests.</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a button to the output page in order to reload the app and to be able to make a new request.</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Embed a static map with a marker based on the GPS coordinates of the donut shops.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Embed a static map with a marker based on the GPS coordinates of the given shops.</li>
 </ul>
 
 ## Design
