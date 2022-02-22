@@ -3,6 +3,7 @@ import { getOutputElement } from '../views/outputView.js';
 import { getHeaderElement } from '../views/outputView.js';
 import { RESULT_LIST_ID } from '../constants.js';
 import { MAP_IMG_ID } from '../constants.js';
+import { INVALID_MSG_ID } from '../constants.js';
 import { RESTART_BUTTON_ID } from '../constants.js';
 
 export const initOutputPage = (userInterface, foodType, postcodeValue, numberValue) => {
@@ -23,8 +24,9 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
 
   async function fetchData(url, obj) {
     const response = await fetch(url, obj);
+
     if (!response.ok) {
-      throw new Error('HTTP Error!');
+      throw new Error('BAD REQUEST!');
     }
     return response.json();
   }
@@ -51,6 +53,7 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
 
   async function main() {
     try {
+      restartButton.textContent = 'Loading';
       const {
         geo: { lon: longitude, lat: latitude },
       } = await fetchData(
@@ -66,9 +69,12 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
         `
       );
       getShops(shopList);
+      restartButton.textContent = 'NEW CRAVE';
     } catch (error) {
-      console.log(error);
-      console.log(err.stack);
+      const errorMessageElement = document.getElementById(INVALID_MSG_ID);
+      errorMessageElement.style.display = '';
+      errorMessageElement.textContent = error;
+      restartButton.textContent = 'RETURN';
     }
   }
   main();

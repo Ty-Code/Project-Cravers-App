@@ -5,5 +5,6 @@ export const POSTCODE_INPUT_ID = 'postcode-input';
 export const NUMBER_INPUT_ID = 'number-input';
 export const RESULT_LIST_ID = 'result-list';
 export const MAP_IMG_ID = 'map-img';
+export const INVALID_MSG_ID = 'invalid-msg';
 export const GET_BUTTON_ID = 'get-button';
 export const RESTART_BUTTON_ID = 'restart-button';

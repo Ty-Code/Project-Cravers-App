@@ -16,7 +16,7 @@
 
 ## Project Goals:
 
-# Must-Haves
+### Must-Haves
 
  <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Create the project structure.</li>
@@ -28,7 +28,7 @@
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Prepare the repository including a readme.</li>
 </ul>
 
-# Nice-to-Haves
+### Nice-to-Haves
 
 <ul class="contains-task-list">
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Add a select menu to choose food type for different search requests.</li>

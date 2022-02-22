@@ -2,6 +2,7 @@
 
 import { RESULT_LIST_ID } from '../constants.js';
 import { MAP_IMG_ID } from '../constants.js';
+import { INVALID_MSG_ID } from '../constants.js';
 import { RESTART_BUTTON_ID } from '../constants.js';
 
 export const getHeaderElement = () => {
@@ -34,6 +35,7 @@ export const getOutputElement = () => {
   outerBoxElement.innerHTML = `
     <ul id="${RESULT_LIST_ID}"></ul>
     <img id="${MAP_IMG_ID}">
+    <p style="display:none;" id="${INVALID_MSG_ID}"></p>
     <button id="${RESTART_BUTTON_ID}" class="btn">
     NEW CRAVE
   </button>
