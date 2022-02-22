@@ -33,23 +33,42 @@ export const getInputElement = () => {
   outerBoxElement.classList.add('centered');
 
   outerBoxElement.innerHTML = `
-    <label class="label">CRAVING FOR :</label>
-    <select class="input" id="${SELECT_ELEMENT_ID}" name="foodType">
-        <option class="option" value="">Select…</option>
-        <option class="option" value="pizza">Pizza</option>
-        <option class="option" value="donut">Donut</option>
-        <option class="option" value="chocolate">Chocolate</option>
-    </select>
-    
-    <label class="label" for="postcode">POSTCODE :</label>
-    <input class="input" type="text" id="${POSTCODE_INPUT_ID}" name="postcode" required minlength="4" maxlength="6" size="10"  placeholder="Enter your postcode">
+  <label class="label">CRAVING FOR :</label>
+  <select class="input" id="${SELECT_ELEMENT_ID}" name="foodType" required>
+    <option class="option" value="">Select…</option>
+    <option class="option" value="pizza">Pizza</option>
+    <option class="option" value="donut">Donut</option>
+    <option class="option" value="chocolate">Chocolate</option>
+  </select>
 
-    <label class="label" for="number">HOUSE NUMBER :</label>
-    <input class="input" type="text" id="${NUMBER_INPUT_ID}" name="number" required minlength="1" maxlength="4" size="10" placeholder="Enter your house number">
+  <label class="label" for="postcode">POSTCODE :</label>
+  <input
+    class="input"
+    type="text"
+    id="${POSTCODE_INPUT_ID}"
+    name="postcode"
+    required
+    minlength="4"
+    maxlength="6"
+    size="10"
+    placeholder="Enter your postcode"
+  />
 
-    <button id="${GET_BUTTON_ID}" class="btn" type="submit">
-      SATISFY!
-    </button>
+  <label class="label" for="number">HOUSE NUMBER :</label>
+  <input
+    class="input"
+    type="text"
+    id="${NUMBER_INPUT_ID}"
+    name="number"
+    required
+    minlength="1"
+    maxlength="4"
+    size="10"
+    placeholder="Enter your house number"
+  />
+
+  <button id="${GET_BUTTON_ID}" class="btn" type="submit">SATISFY!</button>
+
   `;
 
   return outerBoxElement;
