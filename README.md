@@ -1,10 +1,10 @@
 # CRAVERS-App
----
+
 
 
 ## Project Overview
 
-'Cravers' is a single page application that grabs GPS coordinates based on two parameters (postcode and house number) entered by the user and lists the requested shops in the neighborhood with their addresses.
+'Cravers' is a single page application that grabs GPS coordinates based on two parameters (postcode and house number) entered by the user and lists the requested shops in the neighborhood with their addresses. When hovered over the addresses, the location of the given shops can be seen on a static map.
 ## Built With
 
 <p dir="auto">
