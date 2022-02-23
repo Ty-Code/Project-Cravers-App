@@ -24,7 +24,6 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
 
   async function fetchData(url, obj) {
     const response = await fetch(url, obj);
-
     if (!response.ok) {
       throw new Error('BAD REQUEST!');
     }
@@ -53,7 +52,7 @@ export const initOutputPage = (userInterface, foodType, postcodeValue, numberVal
 
   async function main() {
     try {
-      restartButton.textContent = 'Loading';
+      restartButton.textContent = 'Loading...';
       const {
         geo: { lon: longitude, lat: latitude },
       } = await fetchData(

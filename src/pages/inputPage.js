@@ -19,7 +19,7 @@ export const initInputPage = (userInterface) => {
     foodType = e.target.value;
   });
 
-  document.getElementById(GET_BUTTON_ID).addEventListener('click', (event) => {
+  document.getElementById(GET_BUTTON_ID).addEventListener('click', () => {
     const postcodeValue = document.getElementById(POSTCODE_INPUT_ID).value;
     const numberValue = document.getElementById(NUMBER_INPUT_ID).value;
     router('output', foodType, postcodeValue, numberValue);
